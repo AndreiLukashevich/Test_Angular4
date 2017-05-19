@@ -1,4 +1,5 @@
 .days li {
+    list-style-type: none;
     cursor: pointer;
     margin:2px;
 }
