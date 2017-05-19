@@ -7,7 +7,8 @@ import { DayService } from "../../shared/day.service";
   moduleId: module.id,
   selector: 'day-details',
   templateUrl: 'day-details.component.html',
-  styleUrls: ['day-details.component.css']
+  styleUrls: ["../../../../node_modules/bootstrap/dist/css/bootstrap.css"]
+//   styleUrls: ['day-details.component.css']
 })
 export class DayDetailsComponent implements OnInit {
 
