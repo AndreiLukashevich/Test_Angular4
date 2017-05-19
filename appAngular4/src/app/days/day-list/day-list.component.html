@@ -1,0 +1,8 @@
+<h2>Days</h2>
+<ul class="days">
+    <li *ngFor="let day of days"
+        (click)="onSelect(day)"
+        [class.selected]="isSelected(day)">
+        {{day.value}}
+    </li>
+</ul>

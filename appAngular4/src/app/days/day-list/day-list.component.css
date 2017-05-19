@@ -1,0 +1,12 @@
+.days li {
+    cursor: pointer;
+    margin:2px;
+}
+.days li:hover {
+    background-color: lightcoral;
+}
+
+.days li.selected {
+    font-weight: bold;
+    background-color: lightcoral;
+}
