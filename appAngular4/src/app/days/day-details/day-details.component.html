@@ -1,8 +1,22 @@
 <div *ngIf="day">
-	<h2>Selected Day</h2>
-	Value: {{day.value}} <br /> 
-    Task: {{day.task}} <br />
-    
+    <h2>Selected Day</h2>
+    Value: {{day.value}} <br />
+
+    <label for="task">Task</label>
+    <input type="text" class="form-control col-md-3" id="task" [(ngModel)]="day.task" name="task" minlength="4" [disabled]=input_edit
+        required #task="ngModel">
+
+    <div *ngIf="task.errors && (task.dirty || task.touched)" class="alert alert-danger">
+        <div [hidden]="!task.errors.required">
+            Required field
+        </div>
+        <div [hidden]="!task.errors.minlength">
+            Minimum 3 symbols
+        </div>
+    </div>
+
     <br />
     <button (click)="goToDaysList()" class="btn btn-outline-danger">Go Back</button>
+    <button (click)="editTask(task)" class="btn btn-outline-danger">Edit</button>
+    <button *ngIf=button_save (click)="saveTask(task)" class="btn btn-outline-danger" [disabled]="task.errors">Save</button>
 </div>
