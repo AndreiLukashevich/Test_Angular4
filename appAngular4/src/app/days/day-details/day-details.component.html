@@ -16,7 +16,7 @@
     </div>
 
     <br />
-    <button (click)="goToDaysList()" class="btn btn-outline-danger">Go Back</button>
+    <button (click)="goToDaysList()" class="btn btn-outline-danger" [disabled]="task.errors">Go Back</button>
     <button (click)="editTask(task)" class="btn btn-outline-danger">Edit</button>
     <button *ngIf=button_save (click)="saveTask(task)" class="btn btn-outline-danger" [disabled]="task.errors">Save</button>
 </div>
