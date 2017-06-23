@@ -9,6 +9,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HomeComponent } from './home/home.component';
 
 import { DaysModule } from "./days/days.module";
+import { TestModule } from "./test/test.module";
 import { DayService } from "./shared/day.service";
 
 
@@ -22,7 +23,8 @@ import { DayService } from "./shared/day.service";
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    DaysModule
+    DaysModule,
+    TestModule
   ],
   providers: [DayService],
   bootstrap: [AppComponent]

@@ -48,4 +48,14 @@ export class DayDetailsComponent implements OnInit {
         this.input_edit = true;
         this.button_save = false;
     }
+
+    counter: number = 0;
+
+    increment() {
+        this.counter++;
+    }  
+
+    tickHandler1(value) {
+        console.log("Tick Hanlder 1 - " + value);
+    }
 }

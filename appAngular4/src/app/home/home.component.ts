@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -10,6 +10,10 @@ export class HomeComponent implements OnInit {
 
   content = 'Home page.'
 
+   tickHandler1(value) {
+        console.log("Tick Hanlder 1 - " + value);
+    }
+  
   constructor() { }
 
   ngOnInit() {
